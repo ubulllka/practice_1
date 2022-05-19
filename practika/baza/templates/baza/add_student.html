@@ -5,18 +5,18 @@
 {% endblock %}
 
 {% block content %}
-<H1>{{title}}</H1>
-   <form method="post">
-      {% csrf_token %}
-      <h4>ФИО:</h4>
-      {{form.Student_name}}<br><br>
-      <h4>Город</h4>
-      {{form.Student_city}}<br><br>
-      <h4>Возраст</h4>
-      {{form.Student_age}}<br><br>
-      <h4>Выберите группу</h4>
-      {{form.Student_group_id}}<br><br>
-      <span>{{error}}</span>
-      <button class="btn btn-success" type="submit">{{name}}}</button>
-   </form>
+<section class="container">
+   <div style="margin-left: 32%; width: 500px; margin-top: 50px">
+      <H1 class="text-center">{{title}}</H1><br>
+         <form method="post">
+            {% csrf_token %}
+            {{form.Student_name}}<br>
+            {{form.Student_city}}<br>
+            {{form.Student_age}}<br>
+            <h5>Выберите группу&nbsp&nbsp&nbsp&nbsp {{form.Student_group_id}}<br></h5><br>
+            <span>{{error}}</span>
+            <button class="btn btn-success" type="submit">{{name}}</button>
+         </form>
+   </div>
+</section>
 {% endblock %}

@@ -29,7 +29,7 @@ def add_student(request):
         else:
             error = 'Форма введена неверно'
     form = StudentsForm()
-    return render(request, 'baza/add_student.html', {'title': 'Добавление студента', 'name': 'Добавить тудента', 'form': form, 'error' : error})
+    return render(request, 'baza/add_student.html', {'title': 'Добавление студента', 'name': 'Добавить студента', 'form': form, 'error' : error})
 
 def add_group(request):
     error = ''
@@ -41,7 +41,7 @@ def add_group(request):
         else:
             error = 'Форма введена неверно'
     form = GroupForm()
-    return render(request, 'baza/add_group.html', {'title': 'Добавление группы','name': 'Добавить группу', 'form': form, 'error': error})
+    return render(request, 'baza/add_group.html', {'title': 'Добавление группы', 'name': 'Добавить группу', 'form': form, 'error': error})
 
 
 def filter(request):
