@@ -1,0 +1,50 @@
+{% extends 'baza/base.html'%}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+<H1>{{title}}</H1>
+    <br>
+    <h3>Чей вывести список?</h3>
+    <br>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-2">
+        <a href="http://127.0.0.1:8000/students/">
+            <button  type="button" class="btn btn-outline-secondary btn-lg px-4">Студентов</button>
+        </a>
+    </div>
+    <br>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-2">
+        <a href="http://127.0.0.1:8000/group/">
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Групп</button>
+        </a>
+    </div>
+    <br>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-2">
+        <a href="http://127.0.0.1:8000/students_group/">
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Студентов и их группы</button>
+        </a>
+    </div>
+<br>
+    <h3>Какое действие вы хотите сделать?</h3>
+<br>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-2">
+        <a href="http://127.0.0.1:8000/add_student/">
+            <button  type="button" class="btn btn-outline-secondary btn-lg px-4"><i class="fas fa-plus-cricle"></i>Добавить студента</button>
+        </a>
+    </div>
+<br>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-2">
+        <a href="http://127.0.0.1:8000/add_group/">
+            <button  type="button" class="btn btn-outline-secondary btn-lg px-4"><i class="fas fa-plus-cricle"></i>Добавить группу</button>
+        </a>
+    </div>
+<br>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-2">
+        <a href="http://127.0.0.1:8000/filter/">
+            <button  type="button" class="btn btn-outline-secondary btn-lg px-4"><i class="fas fa-plus-cricle"></i>Посмотреть списки отдельных групп</button>
+        </a>
+    </div>
+<br>
+{% endblock %}

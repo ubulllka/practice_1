@@ -1,0 +1,14 @@
+{% extends 'baza/base.html'%}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+<H1>{{title}}</H1>
+<H1>{{student.Student_name}}</H1>
+   <form method="post">
+      {% csrf_token %}
+      <button class="btn btn-danger" type="submit">{{name}}</button>
+   </form>
+{% endblock %}

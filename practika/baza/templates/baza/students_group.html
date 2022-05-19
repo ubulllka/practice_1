@@ -1,0 +1,23 @@
+{% extends 'baza/base.html'%}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+<H1>{{title}}</H1>
+    <table class="table table-striped">
+        <div class="alter alter-warning mt-2">
+            <tr>
+                <th><h3>ФИО студента</h3></th>
+                <th><h3>Название группы</h3></th>
+            </tr>
+                {% for el in list %}
+                    <tr>
+                        <th>{{el.Student_name}}</th>
+                        <th>{{el.Student_group_id}}</th>
+                    </tr>
+                {% endfor %}
+        </div>
+    </table>
+{% endblock %}

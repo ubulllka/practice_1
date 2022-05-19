@@ -1,0 +1,16 @@
+{% extends 'baza/base.html'%}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+<H1>{{title}}</H1>
+   <form method="post">
+      {% csrf_token %}
+      <h4>Название группы:</h4>
+         {{form.Group_name}}<br><br>
+      <span>{{error}}</span>
+      <button class="btn btn-success" type="submit">{{name}}</button>
+   </form>
+{% endblock %}

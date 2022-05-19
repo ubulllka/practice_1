@@ -1,0 +1,26 @@
+{% extends 'baza/base.html'%}
+
+{% block title %}
+{{group.Group_name}}
+{% endblock %}
+
+{% block content %}
+<H1>{{group.Group_name}}</H1>
+     <table class="table table-striped">
+        <div class="alter alter-warning mt-2">
+            <tr>
+                <th><h3>ФИО</h3></th>
+                <th><h3>Город</h3></th>
+                <th><h3>Возраст</h3></th>
+            </tr>
+                {% for el in list %}
+                    <tr>
+                        <th>{{el.Student_name}}</th>
+                        <th>{{el.Student_city}}</th>
+                        <th>{{el.Student_age}}</th>
+                    </tr>
+                {% endfor %}
+        </div>
+    </table>
+    <a href="http://127.0.0.1:8000/group/" class="btn btn-warning">Вернуться к списку групп</a>
+{% endblock %}

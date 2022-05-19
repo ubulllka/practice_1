@@ -1,0 +1,26 @@
+{% extends 'baza/base.html'%}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+<H1>{{title}}</H1>
+    <table class="table table-striped">
+        <div class="alter alter-warning mt-2">
+            <tr>
+                <th><h3>Название</h3></th>
+            </tr>
+                {% for el in list %}
+                    <tr>
+                        <th>{{el.Group_name}}
+                            <div class="alter alter-warning mt-2"></div>
+                            <a href="{%url 'group_id' el.Group_id %}" class="btn btn-warning">Студенты группы</a>
+                            <a href="{%url 'group_update' el.Group_id %}" class="btn btn-success">Редактировать название</a>
+                            <a href="{%url 'group_delete' el.Group_id %}" class="btn btn-danger">Удалить группу</a>
+                        </th>
+                    </tr>
+                {% endfor %}
+        </div>
+    </table>
+{% endblock %}

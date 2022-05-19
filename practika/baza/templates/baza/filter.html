@@ -1,0 +1,36 @@
+{% extends 'baza/base.html'%}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+<H2>Выберите группу/группы</H2>
+    <form method="post" >
+        {% csrf_token %}
+        {% for el in group %}
+            <input type="checkbox" name="checkbox" value="{{el.Group_id}}">{{el.Group_name}}&nbsp
+        {% endfor %}
+        <p><input type="submit" value="Отправить"></p>
+        <p><b>Итоговая таблица:</b></p>
+            <table class="table table-striped" >
+
+                <div class="alter alter-warning mt-2">
+                    <tr>
+                        <th><h3>ФИО</h3></th>
+                        <th><h3>Город</h3></th>
+                        <th><h3>Возраст</h3></th>
+                        <th><h3>Группа</h3></th>
+                    </tr>
+                        {% for el in list %}
+                            <tr>
+                                <th>{{el.Student_name}}</th>
+                                <th>&nbsp{{el.Student_city}}</th>
+                                <th>&nbsp{{el.Student_age}}</th>
+                                <th>&nbsp{{el.Student_group_id}}</th>
+                            </tr>
+                        {% endfor %}
+                </div>
+            </table>
+   </form>
+{% endblock %}
