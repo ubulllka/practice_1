@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block content %}
-<H1>{{title}}</H1>
-<H1>{{student.Student_name}}</H1>
+<H1 class="text-white">{{title}}</H1>
+<H1 class="text-white">{{student.Student_name}}</H1><br>
    <form method="post">
       {% csrf_token %}
       <button class="btn btn-danger" type="submit">{{name}}</button>

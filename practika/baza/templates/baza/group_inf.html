@@ -5,19 +5,19 @@
 {% endblock %}
 
 {% block content %}
-<H1>{{group.Group_name}}</H1>
+<H1 class="text-white">{{group.Group_name}}</H1>
      <table class="table table-striped">
         <div class="alter alter-warning mt-2">
             <tr>
-                <th><h3>ФИО</h3></th>
-                <th><h3>Город</h3></th>
-                <th><h3>Возраст</h3></th>
+                <th><h3 class="text-white">ФИО</h3></th>
+                <th><h3 class="text-white">Город</h3></th>
+                <th><h3 class="text-white">Возраст</h3></th>
             </tr>
                 {% for el in list %}
                     <tr>
-                        <th>{{el.Student_name}}</th>
-                        <th>{{el.Student_city}}</th>
-                        <th>{{el.Student_age}}</th>
+                        <th class="text-white">{{el.Student_name}}</th>
+                        <th class="text-white">{{el.Student_city}}</th>
+                        <th class="text-white">{{el.Student_age}}</th>
                     </tr>
                 {% endfor %}
         </div>

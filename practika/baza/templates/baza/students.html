@@ -5,20 +5,20 @@
 {% endblock %}
 
 {% block content %}
-<H1>{{title}}</H1>
+<H1 class="text-white">{{title}}</H1>
    <table class="table table-striped">
-        <div class="alter alter-warning mt-2">
-            <tr>
-                <th><h3>ФИО</h3></th>
-                <th><h3>Город</h3></th>
-                <th><h3>Возраст</h3></th>
-                <th><h3>Действие</h3></th>
+        <div class="alter alter-warning mt-2 ">
+            <tr >
+                <th><h3 class="text-white">ФИО</h3></th>
+                <th><h3 class="text-white">Город</h3></th>
+                <th><h3 class="text-white">Возраст</h3></th>
+                <th><h3 class="text-white">Действие</h3></th>
             </tr>
                 {% for el in list %}
                     <tr>
-                        <th>{{el.Student_name}}</th>
-                        <th>{{el.Student_city}}</th>
-                        <th>{{el.Student_age}}</th>
+                        <th class="text-white">{{el.Student_name}}</th>
+                        <th class="text-white">{{el.Student_city}}</th>
+                        <th class="text-white">{{el.Student_age}}</th>
                         <th><a href="{%url 'student_update' el.Student_id %}" class="btn btn-success">Редактировать</a>
                         <a href="{%url 'student_delete' el.Student_id %}" class="btn btn-danger">Удалить</a></th>
                     </tr>

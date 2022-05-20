@@ -17,7 +17,7 @@ def get_group(request):
 
 def get_students_group(request):
     gs_list = Students.objects.all()
-    return render(request, 'baza/students_group.html', {'titel': 'Cписок группы студентов', 'list':gs_list})
+    return render(request, 'baza/students_group.html', {'title': 'Cписок группы студентов', 'list': gs_list})
 
 def add_student(request):
     error = ''
