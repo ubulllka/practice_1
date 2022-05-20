@@ -17,7 +17,7 @@ class StudentsForm(ModelForm):
             }),
             "Student_age": NumberInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Город'
+                'placeholder': 'Возраст'
             }),
         }
 
